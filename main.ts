@@ -1,7 +1,7 @@
 // MakeCode extension for PZEM-004T v3.0 Energy Monitor
 // Based on Arduino library by mandulaj (https://github.com/mandulaj/PZEM-004T-v30)
 
-namespace pzem {
+namespace PZEM004T {
     let address = 0xF8 // Default broadcast address
 
     // Modbus function codes
@@ -85,11 +85,11 @@ namespace pzem {
     /**
      * Initialize PZEM communication
      */
-    //% block="init PZEM tx %tx rx %rx"
+    //% block="init PZEM TX %tx RX %rx"
     export function init(tx: SerialPin, rx: SerialPin): void {
         txPin = tx
         rxPin = rx
-        serial.redirect(txPin, rxPin, BaudRate.BaudRate9600)
+        serial.redirect(rxPin, txPin, BaudRate.BaudRate9600)
         basic.pause(100)
     }
 
