@@ -1,6 +1,6 @@
 {
   "name": "pzem004t",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "PZEM-004T v3.0 energy monitor extension for micro:bit",
   "license": "MIT",
   "dependencies": {
