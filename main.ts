@@ -66,7 +66,7 @@ namespace PZEM004T {
     }
 
     function readResponse(length: number): Buffer {
-        basic.pause(200)
+        basic.pause(300)
         let res = serial.readBuffer(length)
         return res
     }
